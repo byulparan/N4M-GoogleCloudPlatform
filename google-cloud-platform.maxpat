@@ -44,7 +44,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 444.0, 434.0, 263.0, 21.0 ],
+					"patching_rect" : [ 407.0, 380.0, 263.0, 21.0 ],
 					"text" : "// samplerate 설정하세요!"
 				}
 
@@ -56,7 +56,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 331.0, 434.0, 105.0, 22.0 ],
+					"patching_rect" : [ 294.0, 380.0, 105.0, 22.0 ],
 					"text" : "samplerate 44100"
 				}
 
@@ -78,7 +78,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 325.0, 380.0, 263.0, 21.0 ],
+					"patching_rect" : [ 350.0, 412.0, 263.0, 21.0 ],
 					"text" : "// bang 을 누르면 변환 된 텍스트가 출력합니다."
 				}
 
@@ -206,7 +206,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 142.0, 239.0, 110.0, 22.0 ],
+									"patching_rect" : [ 146.0, 233.0, 110.0, 22.0 ],
 									"text" : "dict.unpack status:"
 								}
 
@@ -218,7 +218,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 142.0, 213.0, 85.0, 22.0 ],
+									"patching_rect" : [ 146.0, 207.0, 85.0, 22.0 ],
 									"text" : "route success"
 								}
 
@@ -230,7 +230,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 142.0, 187.0, 65.0, 22.0 ],
+									"patching_rect" : [ 146.0, 181.0, 65.0, 22.0 ],
 									"text" : "route npm"
 								}
 
@@ -264,7 +264,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 50.0, 144.0, 111.0, 22.0 ],
+									"patching_rect" : [ 50.0, 144.0, 115.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
@@ -273,7 +273,7 @@
 										"watch" : 0
 									}
 ,
-									"text" : "node.script index.js"
+									"text" : "node.script config.js"
 								}
 
 							}
@@ -285,7 +285,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 142.0, 321.0, 30.0, 30.0 ]
+									"patching_rect" : [ 146.0, 315.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -373,13 +373,11 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-12",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 195.0, 569.0, 118.0, 36.0 ],
-					"text" : "\"안녕하세요 박성민입니다\""
+					"patching_rect" : [ 195.0, 569.0, 118.0, 22.0 ]
 				}
 
 			}
@@ -391,7 +389,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 294.0, 380.0, 24.0, 24.0 ]
+					"patching_rect" : [ 319.0, 412.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -418,8 +416,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -566,8 +562,9 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "index.js",
-				"bootpath" : "C74:/packages/Node For Max/examples/squiggle/clientpage/js",
+				"name" : "config.js",
+				"bootpath" : "~/Dropbox/temp/max/node/google-cloud-platform",
+				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
