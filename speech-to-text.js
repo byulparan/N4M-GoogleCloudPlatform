@@ -1,7 +1,8 @@
-const config = require('./config.js');
-const fs = require('fs');
-const speech = require('@google-cloud/speech');
 const max = require('max-api');
+const speech = require('@google-cloud/speech');
+const fs = require('fs');
+
+const config = require('./config.js');
 
 config.config();
 let sampleRate = 44100;
