@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 230.0, 87.0, 770.0, 596.0 ],
+		"rect" : [ 230.0, 87.0, 770.0, 682.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,35 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-27",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 444.0, 434.0, 263.0, 21.0 ],
+					"text" : "// samplerate 설정하세요!"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-25",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 331.0, 434.0, 105.0, 22.0 ],
+					"text" : "samplerate 44100"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-17",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 110.0, 325.0, 615.0, 21.0 ],
-					"presentation_linecount" : 3,
-					"text" : "// 시작 전 index.js 파일 안 내용(GOOGLE_APPLICATION_CREDENTIALS, 샘플링 레이트 설정)을 채워주셔야 합니다."
+					"patching_rect" : [ 110.0, 311.0, 615.0, 21.0 ],
+					"text" : "// 시작 전 config.js 파일 안 에서 GOOGLE_APPLICATION_CREDENTIALS 을 설정해주세요."
 				}
 
 			}
@@ -57,7 +79,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 325.0, 380.0, 263.0, 21.0 ],
-					"presentation_linecount" : 2,
 					"text" : "// bang 을 누르면 변환 된 텍스트가 출력합니다."
 				}
 
@@ -69,7 +90,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 222.0, 351.0, 137.0, 21.0 ],
-					"presentation_linecount" : 2,
 					"text" : "// 노드 스크립트 시작"
 				}
 
@@ -248,6 +268,8 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
+										"node_bin_path" : "",
+										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -343,7 +365,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 195.0, 467.0, 79.0, 22.0 ],
+					"patching_rect" : [ 195.0, 531.0, 79.0, 22.0 ],
 					"text" : "loadmess set"
 				}
 
@@ -356,7 +378,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 195.0, 505.0, 118.0, 36.0 ],
+					"patching_rect" : [ 195.0, 569.0, 118.0, 36.0 ],
 					"text" : "\"안녕하세요 박성민입니다\""
 				}
 
@@ -392,14 +414,16 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 294.0, 424.0, 111.0, 22.0 ],
+					"patching_rect" : [ 294.0, 488.0, 159.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
-					"text" : "node.script index.js"
+					"text" : "node.script speech-to-text.js"
 				}
 
 			}
@@ -493,6 +517,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-26", 0 ],
 					"source" : [ "obj-33", 0 ]
 				}
@@ -528,9 +559,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "index.js",
-				"bootpath" : "~/Dropbox/temp/max/node/google-speech-to-text",
+				"name" : "speech-to-text.js",
+				"bootpath" : "~/Dropbox/temp/max/node/google-cloud-platform",
 				"patcherrelativepath" : ".",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "index.js",
+				"bootpath" : "C74:/packages/Node For Max/examples/squiggle/clientpage/js",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

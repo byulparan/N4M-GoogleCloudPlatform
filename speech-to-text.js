@@ -1,16 +1,14 @@
+const config = require('./config.js');
 const fs = require('fs');
 const speech = require('@google-cloud/speech');
 const max = require('max-api');
 
+config.config();
+let sampleRate = 44100;
 
-// ================================================================================
-
-process.env.GOOGLE_APPLICATION_CREDENTIALS = ''; // 크레덴셜 파일 위치를 적으세요.
-const sampleRate = 44100;   // 본인의 Max/MSP 샘플링 레이트로 수정하세요.
-
-// ================================================================================
-
-// Creates a client
+max.addHandler('samplerate', (sr) => {
+  sampleRate = sr;
+});
 
 max.addHandler('bang', ()=> {
   const client = new speech.SpeechClient();

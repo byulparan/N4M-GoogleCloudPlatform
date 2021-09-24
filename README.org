@@ -1,0 +1,9 @@
+* Google Cloud Platform in Max/MSP
+  
+  Max/MSP 에서 구글 클라우드 플랫폼을 사용해봅시다. *speech-to-text* 를 포함하고 있습니다.
+  
+** 사용법
+   _config.js 안에서 GOOGLE_APPLICATION_CREDENTIALS 를 설정하셔야 합니다_
+      
+      
+   
